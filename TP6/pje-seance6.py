@@ -95,10 +95,10 @@ if __name__ == '__main__':
 
     iChannels = 1  # Nombre de canaux couleur
     iBitsPerPixel = 8  # Nombre de bits par pixel
-    thres = 127  # Seuil pour la binarisation
+    thres = 87  # Seuil pour la binarisation
 
     iNextID = -1  # Etiquette pour un nouveau blob detecte, a incrementer a chaque detection
-    dSeuilDistance = 50.  # Distance max pour association
+    dSeuilDistance = 30.  # Distance max pour association
 
     # Creation d'une palette de couleurs aleatoires differentes pour l'etiquetage couleur des blobs
     random.seed(int(time.time()))
@@ -152,12 +152,12 @@ if __name__ == '__main__':
     # Regles de filtrage des blobs: a completer/modifier pour affiner la detection
     # Filtrer par aire
     params.filterByArea = True
-    params.minArea = 500
+    params.minArea = 400
     params.maxArea = 3000
 
     # Filtrer par convexite
     params.filterByConvexity = True
-    params.minConvexity = 0.9
+    params.minConvexity = 0.8
     params.maxConvexity = 1.0
 
     # Representation de la memoire contenant l'image sous la forme d'un tableau 2D numpy
